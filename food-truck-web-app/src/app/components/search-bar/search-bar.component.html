@@ -1,0 +1,9 @@
+<div class="search-container">
+  <input
+    type="text"
+    [(ngModel)]="searchTerm"
+    (input)="onInputChange()"
+    placeholder="Search food trucks by name, location, or menu..."
+  />
+  <span class="icon">🔍</span>
+</div>

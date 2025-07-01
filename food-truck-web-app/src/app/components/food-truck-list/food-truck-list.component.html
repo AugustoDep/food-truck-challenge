@@ -1,0 +1,14 @@
+<div class="truck-list">
+  <div
+    class="truck-card"
+    *ngFor="let truck of filteredTrucks"
+    (click)="onSelect(truck)">
+    <h3>{{ truck.applicant }}</h3>
+    <p>{{ truck.address || 'Unknown address' }}</p>
+    <small>{{ formatMenu(truck.foodItems) || 'No menu listed' }}</small>
+  </div>
+
+  <div *ngIf="filteredTrucks.length === 0" class="empty-state">
+    <p>🚫 No food trucks match your search.</p>
+  </div>
+</div>
