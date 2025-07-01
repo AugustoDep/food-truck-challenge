@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="left-panel">
+    <app-header />
+    <app-search-bar (search)="handleSearch($event)" />
+    <app-food-truck-list
+      [filteredTrucks]="filteredTrucks()"
+      (select)="selectTruck($event)"
+    />
+  </div>
+
+  <div class="right-panel">
+    <app-map-view
+      [foodTrucks]="filteredTrucks()"
+      [selectedTruck]="selectedTruck()"
+    />
+  </div>
+</div>
