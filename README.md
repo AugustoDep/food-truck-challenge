@@ -45,7 +45,6 @@ An interactive web application that allows users to explore a curated list of fo
 git clone https://github.com/AugustoDep/food-truck-challenge
 cd food-truck-challenge
 
-# Install Angular dependencies
-cd ClientApp
-npm install
-ng serve
+# Run the full app (serves Angular & API together)
+dotnet run
+
