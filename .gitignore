@@ -1,0 +1,24 @@
+# Root-level common ignores
+.env
+*.log
+.DS_Store
+Thumbs.db
+
+# Node.js/Angular ignores (frontend)
+food-truck-web-app/node_modules/
+food-truck-web-app/dist/
+food-truck-web-app/.angular/
+food-truck-web-app/.env
+
+# Visual Studio / .NET ignores (backend)
+FoodTruckChallenge/**/bin/
+FoodTruckChallenge/**/obj/
+FoodTruckChallenge/.vs/
+FoodTruckChallenge/*.user
+FoodTruckChallenge/*.suo
+FoodTruckChallenge/*.dbmdl
+
+# OS + IDE-specific
+.vscode/
+.idea/
+*.swp

@@ -6,11 +6,7 @@ import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [],
-  imports: [
-    BrowserModule,
-    HttpClientModule,    
-    AppComponent
-  ],
+  imports: [BrowserModule, HttpClientModule, AppComponent],
   providers: [],
 })
-export class AppModule { }
+export class AppModule {}

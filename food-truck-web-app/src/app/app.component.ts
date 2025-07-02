@@ -15,10 +15,10 @@ import { FoodTruck } from './models/food-truck.model';
     HeaderComponent,
     SearchBarComponent,
     FoodTruckListComponent,
-    MapViewComponent
+    MapViewComponent,
   ],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   private foodTruckService = inject(FoodTruckService);
@@ -28,18 +28,26 @@ export class AppComponent {
   selectedTruck = signal<FoodTruck | null>(null);
 
   filteredTrucks = computed(() =>
-    this.foodTrucks().filter(truck =>
+    this.foodTrucks().filter((truck) =>
       `${truck.applicant} ${truck.address ?? ''} ${truck.foodItems ?? ''}`
         .toLowerCase()
-        .includes(this.searchTerm().toLowerCase())
-    )
+        .includes(this.searchTerm().toLowerCase()),
+    ),
   );
 
   async ngOnInit() {
-    const data = await this.foodTruckService.getAll().toPromise();
+    try {
+      const data = await this.foodTruckService.getAll().toPromise();
 
-    //We could handle no response from the API here, but for now I will use !
-    this.foodTrucks.set(data!);
+      if (!data) {
+        console.warn('No data received from foodTruckService.');
+        return;
+      }
+      
+      this.foodTrucks.set(data);
+    } catch (error) {
+      console.error('Error fetching food trucks:', error);
+    }
   }
 
   handleSearch(term: string) {

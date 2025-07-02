@@ -8,11 +8,12 @@
 .truck-card {
   background: #ffffff;
   border: 1px solid #e0e0e0;
-//   border-left: 6px solid ; 
   border-radius: 12px;
   padding: 1rem 1rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
   cursor: pointer;
   font-family: Helvetica, sans-serif;
 
@@ -22,20 +23,21 @@
   }
 
   h3 {
-    margin: 0 0 0.25rem;
+    margin: 0 0 0;
     font-size: 1.4rem;
     color: #333;
     font-weight: bold;
   }
 
   .location {
-    color: #607d8b; // blue-gray
+    color: #607d8b;
     font-weight: 500;
-    margin-bottom: 0.25rem;
+    margin-bottom: 1.2rem;
+    font-size: 0.95rem;
   }
 
   .menu {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #666;
     line-height: 1.4;
   }

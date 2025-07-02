@@ -1,13 +1,12 @@
 .container {
   display: grid;
   grid-template-columns: 30vw 70vw;
-  height: calc(100vh - 2rem); 
-  margin: 1rem;               
-  border: 2px solid #ddd;     
-  border-radius: 16px;        
+  height: calc(100vh - 2rem);
+  margin: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 16px;
   overflow: hidden;
-  background-color: #ffffff;  
-
+  background-color: #ffffff;
 }
 
 .left-panel {
@@ -18,6 +17,21 @@
   overflow-y: auto;
   background: #fafafa;
   border-right: 1px solid #eee;
+  height: 100%;
+
+  .header-with-icon {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    img {
+      margin-left: auto;
+      text-align: right;
+      width: 100px;
+      height: 100px;
+      padding-bottom: 20px;
+    }
+  }
 }
 
 .right-panel {

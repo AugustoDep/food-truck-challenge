@@ -1,5 +1,5 @@
-:host {
-  display: block;
-  height: 100%;
-  width: 100%;
+.map-skeleton {
+  height: 400px;
+  background: #e0e0e0;
+  animation: pulse 2s infinite;
 }

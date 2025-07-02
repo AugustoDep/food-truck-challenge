@@ -1,6 +1,9 @@
 <div class="container">
   <div class="left-panel">
-    <app-header />
+    <div class="header-with-icon">
+      <app-header />
+      <img src="/assets/food-truck.png" alt="Food Truck" />
+    </div>
     <app-search-bar (search)="handleSearch($event)" />
     <app-food-truck-list
       [filteredTrucks]="filteredTrucks()"

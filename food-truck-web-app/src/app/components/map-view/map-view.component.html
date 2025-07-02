@@ -1,7 +1,10 @@
+<div class="map-skeleton" *ngIf="!mapReady"></div>
 <google-map
+  *ngIf="mapReady"
   height="100%"
   width="100%"
   [center]="center"
   [zoom]="zoom"
-  [mapId]="mapId">
+  [mapId]="mapId"
+>
 </google-map>

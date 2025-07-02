@@ -2,10 +2,13 @@
   <div
     class="truck-card"
     *ngFor="let truck of filteredTrucks"
-    (click)="onSelect(truck)">
+    (click)="onSelect(truck)"
+  >
     <h3>{{ truck.applicant }}</h3>
-    <p>{{ truck.address || 'Unknown address' }}</p>
-    <small>{{ formatMenu(truck.foodItems) || 'No menu listed' }}</small>
+    <p class="location">{{ truck.address || "Unknown address" }}</p>
+    <small class="menu">{{
+      formatMenu(truck.foodItems) || "No menu listed"
+    }}</small>
   </div>
 
   <div *ngIf="filteredTrucks.length === 0" class="empty-state">
